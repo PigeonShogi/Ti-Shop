@@ -1,0 +1,134 @@
+openapi: "3.0.0"
+info:
+  version: "1.0.0"
+  title: "Ti-Shop API"
+
+servers:
+  - url: /api
+
+paths:
+
+  /users/sign-in:
+    post:
+      summary: 登入
+      responses:
+        '200':
+          description: 登入成功
+
+  /users/sign-out:
+    get:
+      summary: 登出
+      responses:
+        '200':
+          description: 登出成功
+
+  /products:
+    get:
+      summary: 瀏覽所有商品或透過查詢條件查詢商品
+      parameters:
+        - name: name
+          in: query
+          description: 商品名稱
+          required: false
+          schema:
+            type: string
+        - name: price
+          in: query
+          description: 售價
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 查詢成功
+
+  /carts:
+    get:
+      summary: 查看購物車
+      responses:
+        '200':
+          description: 查詢成功
+    post:
+      summary: 將商品加入購物車
+      responses:
+        '201':
+          description: 商品已加入購物車
+    put:
+      summary: 更新購物車中商品的數量
+      parameters:
+        - name: id
+          in: path
+          description: 購物車中商品的 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 更新成功
+    delete:
+      summary: 刪除購物車中的商品
+      parameters:
+        - name: id
+          in: path
+          description: 購物車中商品的 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 刪除成功
+
+  /orders:
+    post:
+      summary: 送出訂單
+      responses:
+        '201':
+          description: 訂單已送出
+
+  /seller/{id}/products:
+    get:
+      summary: 查看商品清單
+      parameters:
+        - name: id
+          in: path
+          description: 賣家 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 查詢成功
+
+  /seller/products/{id}:
+    delete:
+      summary: 下架商品
+      parameters:
+        - name: id
+          in: path
+          description: 商品 ID
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 商品已下架
+
+  /seller/products:
+    post:
+      summary: 上架商品
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description:
+                  type: string
+                price:
+                  type: integer
+                stock:
+                  type: integer
+      responses:
+        '201':
+          description: 商品已上架

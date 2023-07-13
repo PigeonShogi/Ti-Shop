@@ -1,8 +1,12 @@
 require("dotenv").config();
 
-const express = require("express");
 const cors = require("cors");
+const express = require("express");
 const router = require("./routes/index");
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
+
+const swaggerDocument = YAML.load("./docs/swagger.yaml");
 
 const app = express();
 const corsOptions = {
@@ -23,6 +27,8 @@ const PORT = process.env.PORT || 8080;
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(PORT, () => {
   console.info(`Listening on port ${PORT}...`);
