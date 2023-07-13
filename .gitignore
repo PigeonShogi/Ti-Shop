@@ -1,0 +1,28 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ESLint
+.eslintrc.js
+.eslintignore
+
+# npm
+node_modules
+*.log
+*.gz
+.env
+
+# other
+notes
+
+
+# .vscode
+.vscode
+
+
