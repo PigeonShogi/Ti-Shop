@@ -12,6 +12,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "https://tishop.vercel.app",
+    "https://tishopdev.vercel.app",
     "http://localhost:5173",
     "http://localhost:5174",
   ],
