@@ -8,6 +8,7 @@
     "start:dev": "nodemon --watch docs/swagger.yaml app.js",
     "migrate:down": "npx sequelize db:migrate:undo:all",
     "migrate:up": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

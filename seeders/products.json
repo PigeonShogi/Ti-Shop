@@ -1,0 +1,72 @@
+[
+  {
+    "name": "iPhone 12",
+    "description": "Latest Apple iPhone 12",
+    "price": 25000,
+    "inventory": 20,
+    "category_id": 1
+  },
+  {
+    "name": "Harry Potter Book",
+    "description": "Famous fantasy novel",
+    "price": 280,
+    "inventory": 100,
+    "category_id": 2
+  },
+  {
+    "name": "Sofa",
+    "description": "Comfortable seating for relaxation and lounging in living spaces.",
+    "price": 9870,
+    "inventory": 30,
+    "category_id": 3
+  },
+  {
+    "name": "Barbie Doll",
+    "description": "Kids toy",
+    "price": 850,
+    "inventory": 50,
+    "category_id": 4
+  },
+  {
+    "name": "Instant Noodles",
+    "description": "Easy to cook food",
+    "price": 75,
+    "inventory": 200,
+    "category_id": 5
+  },
+  {
+    "name": "T-Shirt",
+    "description": "Men T-Shirt",
+    "price": 450,
+    "inventory": 150,
+    "category_id": 6
+  },
+  {
+    "name": "Lipstick",
+    "description": "Red lipstick",
+    "price": 2450,
+    "inventory": 80,
+    "category_id": 7
+  },
+  {
+    "name": "Basketball",
+    "description": "Sports equipment",
+    "price": 625,
+    "inventory": 70,
+    "category_id": 8
+  },
+  {
+    "name": "Pen",
+    "description": "Office supplies",
+    "price": 47,
+    "inventory": 500,
+    "category_id": 9
+  },
+  {
+    "name": "Pillow",
+    "description": "Comfortable pillow",
+    "price": 899,
+    "inventory": 60,
+    "category_id": 10
+  }
+]

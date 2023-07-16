@@ -1,0 +1,72 @@
+[
+  {
+    "email": "buyer1@example.com",
+    "password": "titaner",
+    "role": "buyer",
+    "buyer_phone": "0912345678",
+    "shipping_address": "Taipei, Taiwan"
+  },
+  {
+    "email": "buyer2@example.com",
+    "password": "password2",
+    "role": "buyer",
+    "buyer_phone": "0912345679",
+    "shipping_address": "Taichung, Taiwan"
+  },
+  {
+    "email": "seller1@example.com",
+    "password": "titaner",
+    "role": "seller",
+    "buyer_phone": "0912345680",
+    "shipping_address": "Kaohsiung, Taiwan"
+  },
+  {
+    "email": "seller2@example.com",
+    "password": "password4",
+    "role": "seller",
+    "buyer_phone": "0912345681",
+    "shipping_address": "Taipei, Taiwan"
+  },
+  {
+    "email": "admin1@example.com",
+    "password": "password5",
+    "role": "admin",
+    "buyer_phone": "0912345682",
+    "shipping_address": "Taichung, Taiwan"
+  },
+  {
+    "email": "buyer3@example.com",
+    "password": "password6",
+    "role": "buyer",
+    "buyer_phone": "0912345683",
+    "shipping_address": "Taipei, Taiwan"
+  },
+  {
+    "email": "seller3@example.com",
+    "password": "password7",
+    "role": "seller",
+    "buyer_phone": "0912345684",
+    "shipping_address": "Kaohsiung, Taiwan"
+  },
+  {
+    "email": "admin2@example.com",
+    "password": "password8",
+    "role": "admin",
+    "buyer_phone": "0912345685",
+    "shipping_address": "Taipei, Taiwan"
+  },
+  {
+    "email": "buyer4@example.com",
+    "password": "password9",
+    "role": "buyer",
+    "buyer_phone": "0912345686",
+    "shipping_address": "Taichung, Taiwan"
+  },
+  {
+    "email": "seller4@example.com",
+    "password": "password10",
+    "role": "seller",
+    "buyer_phone": "0912345687",
+    "shipping_address": "Kaohsiung, Taiwan"
+  }
+]

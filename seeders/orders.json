@@ -1,0 +1,12 @@
+[
+  { "order_status": "pending" },
+  { "order_status": "pending" },
+  { "order_status": "shipping" },
+  { "order_status": "completed" },
+  { "order_status": "pending" },
+  { "order_status": "shipping" },
+  { "order_status": "completed" },
+  { "order_status": "pending" },
+  { "order_status": "completed" },
+  { "order_status": "pending" }
+]
