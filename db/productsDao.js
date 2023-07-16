@@ -8,30 +8,31 @@ const fieldNames = [
   "category_id",
 ];
 
-async function fetchProducts() {
+// 依照 query parameter 查詢商品。conditions 的型別是 object。
+async function fetchProductsByConditions(conditions) {
   try {
-    const products = await knex.select(fieldNames).from("products");
+    let query = knex.select(fieldNames).from("products");
+
+    if (conditions.productName) {
+      query = query.where("name", "like", `%${conditions.productName}%`);
+    }
+
+    if (conditions.priceGte) {
+      query = query.where("price", ">=", conditions.priceGte);
+    }
+
+    if (conditions.priceLte) {
+      query = query.where("price", "<=", conditions.priceLte);
+    }
+
+    const products = await query;
+
     return products;
   } catch (error) {
     console.error("Error fetching products:", error);
   }
 }
-
-async function fetchProductsByName(productName) {
-  try {
-    const products = await knex
-      .select(fieldNames)
-      .from("products")
-      .where("name", "like", `%${productName}%`);
-    return products;
-  } catch (error) {
-    console.error("Error fetching products:", error);
-  }
-}
-
-
 
 module.exports = {
-  fetchProducts,
-  fetchProductsByName,
+  fetchProductsByConditions,
 };

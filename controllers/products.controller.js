@@ -1,16 +1,14 @@
-const { fetchProducts, fetchProductsByName } = require("../db/productsDao");
+const { fetchProductsByConditions } = require("../db/productsDao");
 
 module.exports = {
   getProducts: async (req, res) => {
-    let products;
-    const productName = req.query.name;
-    console.log({ productName });
+    const { productName, priceGte, priceLte } = req.query;
 
-    if (!productName) {
-      products = await fetchProducts();
-    } else {
-      products = await fetchProductsByName(productName);
-    }
+    const products = await fetchProductsByConditions({
+      productName,
+      priceGte,
+      priceLte,
+    });
 
     res.status(200).json({
       status: "200 (OK)",
