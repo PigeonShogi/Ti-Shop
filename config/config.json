@@ -17,7 +17,6 @@
   },
   "production": {
     "use_env_variable": "MYSQL_URL",
-    "dialect": "mysql2",
-    "port": 3306
+    "dialect": "mysql2"
   }
 }

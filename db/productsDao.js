@@ -11,7 +11,7 @@ const fieldNames = [
 // 依照 query parameter 查詢商品。conditions 的型別是 object。
 async function fetchProductsByConditions(conditions) {
   try {
-    let query = knex.select(fieldNames).from("products");
+    let query = knex.select(fieldNames).from("Products");
 
     if (conditions.productName) {
       query = query.where("name", "like", `%${conditions.productName}%`);

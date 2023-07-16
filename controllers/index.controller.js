@@ -4,7 +4,9 @@ module.exports = {
     res.status(200).json({
       status: "200 (OK)",
       message: "伺服器運作中",
-      test: "目前無測試新功能",
+      test: "products -> Products",
     });
   },
 };
+
+
