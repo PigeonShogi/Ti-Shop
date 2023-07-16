@@ -7,51 +7,60 @@ servers:
   - url: /api
 
 paths:
-
   /users/sign-in:
     post:
       summary: 登入
       responses:
-        '200':
+        "200":
           description: 登入成功
 
   /users/sign-out:
     get:
       summary: 登出
       responses:
-        '200':
+        "200":
           description: 登出成功
 
   /products:
     get:
       summary: 瀏覽所有商品或透過查詢條件查詢商品
       parameters:
-        - name: name
+        - name: productName
           in: query
           description: 商品名稱
           required: false
           schema:
             type: string
-        - name: price
+            default: "pen"
+        - name: priceGte
           in: query
-          description: 售價
+          description: 商品最低價格
           required: false
           schema:
             type: integer
+            default: 1
+        - name: priceLte
+          in: query
+          description: 商品最高價格
+          required: false
+          schema:
+            type: integer
+            default: 100
       responses:
-        '200':
+        "200":
           description: 查詢成功
+          
 
   /carts:
     get:
       summary: 查看購物車
       responses:
-        '200':
+        "200":
           description: 查詢成功
     post:
       summary: 將商品加入購物車
       responses:
-        '201':
+        "201":
           description: 商品已加入購物車
     put:
       summary: 更新購物車中商品的數量
@@ -63,7 +72,7 @@ paths:
           schema:
             type: integer
       responses:
-        '200':
+        "200":
           description: 更新成功
     delete:
       summary: 刪除購物車中的商品
@@ -75,14 +84,14 @@ paths:
           schema:
             type: integer
       responses:
-        '200':
+        "200":
           description: 刪除成功
 
   /orders:
     post:
       summary: 送出訂單
       responses:
-        '201':
+        "201":
           description: 訂單已送出
 
   /seller/{id}/products:
@@ -96,7 +105,7 @@ paths:
           schema:
             type: integer
       responses:
-        '200':
+        "200":
           description: 查詢成功
 
   /seller/products/{id}:
@@ -110,7 +119,7 @@ paths:
           schema:
             type: integer
       responses:
-        '200':
+        "200":
           description: 商品已下架
 
   /seller/products:
@@ -130,5 +139,5 @@ paths:
                 stock:
                   type: integer
       responses:
-        '201':
+        "201":
           description: 商品已上架
