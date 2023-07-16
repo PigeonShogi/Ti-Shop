@@ -14,12 +14,3 @@ async function fetchUsers() {
 module.exports = {
   fetchUsers,
 };
-
-/*
-mkdir db
-touch db/db.js
-touch db/productsDao.js
-touch db/usersDao.js
-
-編輯或改寫 db/db.js、config/config.json
-*/ 
